@@ -1,0 +1,123 @@
+
+〇コーディング規約
+
+===============================================================
+◆目的
+このプロジェクト全体に適用、企業に入ったときのコーディング規約になれるため
+また、更なる自身のコードの可読性の向上の練習の一環
+
+====================================================================================
+◆プロジェクトの構成
+基本的にはAssetsの中しかいじらない
+
+・ソースコード
+Assets/Script/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/Script/Public or Title or Game etc
+
+・モデル
+Assets/Model/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/Model/Public or Title or Game etc
+
+・画像
+Assets/Image/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/Image/Public or Title or Game etc
+
+・BGM
+Assets/Sound/BGM/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/Sound/BGM/Public or Title or Game etc
+
+・SE
+Assets/Sound/SE/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/Sound/SE/Public or Title or Game etc
+
+・UnityStoreのAsset
+基本的には上記のどれかに当てはまると思うので上記に。
+ファイル移動で動作がおかしくなる場合にみ、以下に格納
+Assets/UnityStore/Public or Title or Game etc
+最後のファイルはシーンに合わせて変更、シーンを跨いで使用するものはPublicに。
+ただし、テストに使ったものは以下に格納
+Assets/Test/UnityStore/Public or Title or Game etc
+
+・ゲームで使う情報、セーブデータ
+http://magnaga.com/unity/2016/01/11/unity-save/
+上記の方法を採用。
+exeからData/System or Character
+
+===============================================================
+◆命名規則
+・変数
+lower camel caseを使用
+最初は小文字、あとは大文字
+更に変数の意味が分かりやすいもの
+**ただしconstを使う場合はすべて大文字でsnake caseを使用
+ex) cntTime , playerHp , PLAYER_HP
+
+・関数
+lower camel caseを使用
+最初は小文字、あとは大文字
+更に関数の意味が分かりやすいもの
+ex) getPlayerHp , isDelete
+
+・クラス
+upper camel case
+最初は大文字、あとも大文字
+ex) PlayerState , Enemy
+
+・列挙型
+snake caseとuppser camel caseを使用
+中身はconstと同様。
+ex) Enemy_Type , TYPE_1
+
+・構造体
+snake caseとuppser camel caseを使用
+中身は変数と同様。
+ex) Player_Info , hp
+
+===============================================================
+◆コーディングスタイル
+ソースコードの先頭に以下のコメントをつける
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~		ソースコードの情報
+~~
+~~		Name	:	xx.cs
+~~		Author	:	xxxx
+~~		Date	:	xxxx/xx/xx
+~~		
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~		各関数の説明
+~~
+~~		Name		:	fanction()
+~~		Return		:	void
+~~		Argument	:	void
+~~		Contents	:	動き方
+~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+また、以下の状況では必ずコメントをつける事
+・変数の作成時
+・ifやforのインデントが深くなる時
+
+===============================================================
+◆禁止事項
+iやjなどの一文字変数
+
+===============================================================
+◆制限事項
+特になし
+
+===============================================================
+◆推奨事項
+特になし
+===============================================================
+
